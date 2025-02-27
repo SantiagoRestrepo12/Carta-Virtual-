@@ -125,7 +125,12 @@ class CartaVirtual:
         tk.Button(menu_ventana, text="Licores", command=self.mostrar_licores, width=20, height=2, bg="#8d99ae", activebackground="#edf2f4", fg="#2b2d42", font=("Georgia", 12, "bold")).pack(pady=5)
 
     def reservaciones(self):
-        webbrowser.open("https://wa.me/1234567890")
+        numero = "3004417666"  # Número de WhatsApp del restaurante
+        mensaje = "Hola, deseo hacer una reserva"  # Mensaje predeterminado
+        mensaje_codificado = mensaje.replace(" ", "%20")  # Reemplaza espacios por %20
+        enlace = f"https://wa.me/{numero}?text={mensaje_codificado}"
+        webbrowser.open(enlace)
+
 
     def mostrar_ubicaciones(self):
         webbrowser.open("https://www.google.com/maps?q=restaurante+sushisom")
